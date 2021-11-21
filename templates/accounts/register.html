@@ -12,6 +12,8 @@
 
 		<form action="{% url 'register' %}" method="POST">
 			{% csrf_token %}
+			<a href="#" class="btn btn-facebook btn-block mb-2"> <i class="fab fa-facebook-f"></i> &nbsp  Sign up with Facebook</a>
+			<a href="#" class="btn btn-google btn-block mb-4"> <i class="fab fa-google"></i> &nbsp  Sign up with Google</a>
 				<div class="form-row">
 					<div class="col form-group">
 						<label>First name</label>

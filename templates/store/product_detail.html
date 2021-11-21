@@ -18,7 +18,7 @@
 					</article> <!-- gallery-wrap .end// -->
 					<ul class="thumb">
 						<li>
-							<a href="{{ single_product.images.url }}" target="mainImage"><img src="{{ single_product.images.url }}" alt="Product Image"></a>
+
 							{% for i in product_gallery %}
 							<a href="{{i.image.url}}" target="mainImage"><img src="{{i.image.url}}" alt="Product Image"></a>
 							{% endfor %}
@@ -31,7 +31,7 @@
 						{% csrf_token %}
 						<article class="content-body">
 
-							<h2 class="title">{{ single_product.product_name }}</h2>
+							<h2 class="title"> <a href="{{ wishlist_item.product.get_url }}" {{ single_product.product_name }}></a> </h2></a>
 							<div class="rating-star">
 								<span>
 									<i class="fa fa-star{% if single_product.averageReview < 0.5 %}-o{% elif single_product.averageReview >= 0.5 and single_product.averageReview < 1 %}-half-o {% endif %}" aria-hidden="true"></i>
@@ -78,7 +78,7 @@
 							{% if single_product.stock <= 0 %}
 							<h5 class="text-danger">Out of Stock</h5>
 							{% else %}
-							<button type="submit" class="btn  btn-primary"> <span class="text">Add to Cart</span> <i class="fa fa-shopping-cart"></i> </button>
+							<button type="submit" class="btn  btn-primary"> <span class="text">Add To Cart</span> <i class="fa fa-shopping-cart"></i> </button> <br>
 							{% endif %}
 						</article> <!-- product-info-aside .// -->
 					</form>

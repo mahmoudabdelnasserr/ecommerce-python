@@ -1,31 +1,95 @@
 
 {% extends 'base.html' %}
+{% load i18n %}
 {% load static %}
 
-{% block content %}
+	{% block content %}
 
 
 
-<!-- ========================= SECTION MAIN ========================= -->
+
+
+
+<!-- ========================= SECTION INTRO ========================= -->
+<section class="section-intro">
+
+<div class="intro-banner-wrap">
+	<img src="{% static 'images/banners/banner1.jpg' %}" class="w-100 img-fluid" style="height:50%">
+</div>
+
+</section>
+<!-- ========================= SECTION INTRO END// ========================= -->
+
+
+
+<!-- ========================= SECTION INTRO ========================= -->
 <section class="section-intro padding-y-sm">
 <div class="container">
 
-<div class="intro-banner-wrap">
-	<img src="{% static 'images/banners/cover.jpg' %}" class="img-fluid rounded">
-</div>
+
 
 </div> <!-- container //  -->
 </section>
-<!-- ========================= SECTION MAIN END// ========================= -->
+<!-- ========================= SECTION INTRO END// ========================= -->
+
+
+<!-- ========================= SECTION FEATURE ========================= -->
+<section class="section-content padding-y-sm" >
+<div class="container">
+<article class="card card-body">
+
+
+<div class="row">
+	<div class="col-md-4">
+		<figure class="item-feature">
+			<span class="text-primary"><i class="fa fa-2x fa-truck"></i></span>
+			<figcaption class="pt-3">
+				<h5 class="title">{% trans 'Fast delivery' %}</h5>
+
+			</figcaption>
+		</figure> <!-- iconbox // -->
+	</div><!-- col // -->
+	<div class="col-md-4">
+		<figure  class="item-feature">
+			<span class="text-primary"><i class="fa fa-2x fa-home"></i></span>
+			<figcaption class="pt-3">
+				<h5 class="title">{% trans 'Fast delivery' %}</h5>
+
+			</figcaption>
+		</figure> <!-- iconbox // -->
+	</div><!-- col // -->
+    <div class="col-md-4">
+		<figure  class="item-feature">
+			<span class="text-primary"><i class="fa fa-2x fa-lock"></i></span>
+			<figcaption class="pt-3">
+				<h5 class="title">{% trans 'High secured' %}</h5>
+
+			</figcaption>
+		</figure> <!-- iconbox // -->
+	</div> <!-- col // -->
+</div>
+</article>
+
+</div> <!-- container .//  -->
+</section>
+<!-- ========================= SECTION FEATURE END// ========================= -->
+
+
+
+<!-- ========================= SECTION SPECIAL END// ========================= -->
+
+
+
 
 <!-- ========================= SECTION  ========================= -->
-<section class="section-name padding-y-sm">
+<section class="section-name  padding-y-sm">
 <div class="container">
 
 <header class="section-heading">
-	<a href="{% url 'store' %}" class="btn btn-outline-primary float-right">See all</a>
-	<h3 class="section-title">Popular products</h3>
+	<a href="{% url 'store' %}" class="btn btn-outline-primary float-right">{% trans 'See all' %}</a>
+	<h3 class="section-title">{% trans 'Popular products' %}</h3>
 </header><!-- sect-heading -->
+
 
 
 <div class="row">
@@ -53,14 +117,5 @@
 
 </div><!-- container // -->
 </section>
-<!-- ========================= SECTION  END// ========================= -->
-
-
-
-
-
-
-</body>
-</html>
 
 {% endblock %}
